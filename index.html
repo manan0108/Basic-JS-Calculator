@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator using Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-800 font-sans font-bold text-white">
+    <div
+        class="border-solid border-4 border-black text-3xl md:text-5xl md:w-2/5 w-4/5 md:p-3 p-2 grid grid-cols-12 gap-2 bg-white m-auto mt-24 rounded-xl text-center">
+        <textarea disabled rows="1"
+            class="bg-gray-800 pl-3 resize-none rounded-xl w-auto border-solid border-neutral-950 border-2 md:col-span-10 col-span-9 md:content-normal content-center pb-1"
+            id="screen" placeholder="Try 2+4"></textarea>
+        <button class="border-solid border-4 border-black md:col-span-2 col-span-3 rounded-xl text-xl pl-4 pr-4 h-16 bg-green-600"
+            onclick="clearDisp()">AC</button>
+    </div>
+    <div id="calc_keys" class="md:w-2/5 w-4/5 m-auto mt-3 pt-1 grid grid-rows-4 grid-cols-12 gap-2 text-3xl">
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('1')">1</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('2')">2</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('3')">3</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('/')">/</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('4')">4</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('5')">5</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('6')">6</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('*')">*</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('7')">7</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('8')">8</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('9')">9</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('-')">-</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('0')">0</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="showInDisplay('.')">.</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            onclick="calculate()">=</button>
+        <button class="col-span-3 rounded-xl border-solid border-4 border-black p-5 items-centerh-12 bg-green-600"
+            data-action="add" onclick="showInDisplay('+')">+</button>
+    </div>
+    <!-- shibbh -->
+    <script src="src/script.js"></script>
+</body>
+
+</html>
